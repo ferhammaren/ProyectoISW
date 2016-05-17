@@ -6,4 +6,5 @@ la clase de Diseño de Interacciones utilizando la técnica Pictive, a fin de cu
 la usabilidad del sistema.
 
 Diseño y programación: Luisa Fernanda Meza López y Edgar Alan Cebrero López
+
 Rediseño de la interfaz: Luisa Fernanda Meza López, Marcela Angulo, Agustín Acero y Victor Moreno
