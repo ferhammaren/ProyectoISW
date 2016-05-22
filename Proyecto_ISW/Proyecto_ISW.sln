@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto_ISW", "Proyecto_ISW\Proyecto_ISW.csproj", "{F5476D9B-F406-404C-81D0-337291AEFC12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clases", "Clases", "{AA71D577-D4C5-43AF-99A1-FFC8CB2D1A41}"
+	ProjectSection(SolutionItems) = preProject
+		Usuario.cs = Usuario.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5476D9B-F406-404C-81D0-337291AEFC12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5476D9B-F406-404C-81D0-337291AEFC12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5476D9B-F406-404C-81D0-337291AEFC12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5476D9B-F406-404C-81D0-337291AEFC12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
