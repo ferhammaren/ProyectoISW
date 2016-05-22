@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Proyecto_ISW.Alumno" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAQAAAgAAAEgACACACAgAAAABAQAAAIAAAAAAAAABA=</HashCode>
+      <FileName>Clases\Alumno.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_ISW.Usuario" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAIAAAAAAAgAAAAAAAACAAAAA=</HashCode>
+      <FileName>Clases\Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_ISW.Form1" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_ISW.Program" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_ISW.Clases.DataAccess" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAACQAAAAAAA=</HashCode>
+      <FileName>Clases\DataAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_ISW.Clases.ProgramasAsignados" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQIAAAgAAAAAAAAAAiAAAAAAgAAAAAAAAAIAAAAAE=</HashCode>
+      <FileName>Clases\ProgramasAsignados.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_ISW.Clases.ProgramaSS" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAKAAAAAAAAIAEAAAAIBAEAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Clases\ProgramaSS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_ISW.Clases.Receptor" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAACAAAAAgAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clases\Receptor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_ISW.Properties.Resources" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_ISW.Properties.Settings" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
