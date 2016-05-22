@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_ISW.Clases;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,12 @@ namespace Proyecto_ISW
         private DateTime fechaTallerSegEtapa { get; set; }
         private DateTime fechaAcPrimEtapa { get; set; }
         private DateTime fechaAcSegEtapa { get; set; }
+        private ProgramaSS[] programas { get; set; }
+
+        public Alumno()
+        {
+
+        }
 
     }
 }
