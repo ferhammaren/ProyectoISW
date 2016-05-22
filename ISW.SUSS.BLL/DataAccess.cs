@@ -10,6 +10,8 @@ namespace Proyecto_ISW.Clases
     class DataAccess
     {
         private DataSet data;
+        private ProgramaSS programa;
+        private Usuario usuario;
 
         public Usuario getUsuario(string nom, string pass)
         {
@@ -21,8 +23,14 @@ namespace Proyecto_ISW.Clases
         public ProgramaSS getProgramaAsignado(Alumno alumno)
         {
             data = new DataSet();
-            ProgramaSS programa = new ProgramaSS();
+            programa = new ProgramaSS();
             return programa;
+        }
+
+        public ProgramaSS getProgramaSS(int id, int carrera, string nombre)
+        {
+            data = new DataSet();
+            programa = new ProgramaSS();
         }
     }
 }
