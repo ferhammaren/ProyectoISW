@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISW.SUSS.DAL
+namespace ISW.SUSS.DataAccess
 {
     class Program
     {

@@ -7,13 +7,59 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 163px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <table class="auto-style1">
+            <tr>
+            <td>
+        <asp:Image ID="Image1" runat="server" Height="114px" ImageUrl="~\imagenes\logoUABC.jpg" Width="78px" />
+            </td>
+            <td>&nbsp;</td>
+            <td style="text-align: center; vertical-align: middle">Universidad Autónoma de Baja California
+                <br />
+                Coordinación de Formación Básica
+                <br />
+                Coordinación de Formación Profesional y Vinculación Universitaria<br />
+                Sistema Universitario de Servicio Social</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
         
-        </asp:ContentPlaceHolder>
+        
+    <div>
+         <table class="auto-style1">
+             <tr>
+                 <td class="auto-style2">
+         <asp:Menu ID="Menu1" runat="server">
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/alumnoMain.aspx" Text="Principal" Value="Principal"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/alumnoCatalogoProgramas.aspx" Text="Catálogo de programas" Value="Catálogo de programas"></asp:MenuItem>
+                    <asp:MenuItem Text="Taller de Servicio Social" Value="Taller de Servicio Social">
+                        <asp:MenuItem Text="Información de Servicio Social" Value="Información de Servicio Social"></asp:MenuItem>
+                        <asp:MenuItem Text="Presentar Taller en línea" Value="Presentar Taller en línea"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Actualizar datos" Value="Actualizar datos"></asp:MenuItem>
+                    <asp:MenuItem Text="Contáctanos" Value="Contáctanos"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+                 </td>
+                 <td>    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+           
+        </asp:ContentPlaceHolder></td>
+             </tr>
+         </table>
+    
     </div>
     </form>
 </body>
