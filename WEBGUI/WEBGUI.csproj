@@ -176,6 +176,16 @@
       <DependentUpon>UnidadReceptora.Master</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ISW.SUSS.BLL\Clases.csproj">
+      <Project>{cd570019-1ae5-4d72-bc34-6321ae254aef}</Project>
+      <Name>Clases</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ISW.SUSS.DAL\DataAccess.csproj">
+      <Project>{1fc4a92a-03de-474f-953e-af431bba0cb9}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

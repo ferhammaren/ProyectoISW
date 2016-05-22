@@ -11,11 +11,11 @@ namespace Proyecto_ISW.Clases
     {
         private DataSet data;
 
-        public Usuario getUsuario(string nom, string pass)
+        public/* Usuario*/void getUsuario(string nom, string pass)
         {
-            data = new DataSet();
-            Usuario usuario = new Usuario();
-            return usuario;
+            //data = new DataSet();
+            //Usuario usuario = new Usuario();
+            //return usuario;
         }
 
         public ProgramaSS getProgramaAsignado(Alumno alumno)

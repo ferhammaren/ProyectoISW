@@ -1,10 +1,10 @@
 ﻿<%@ Page Title="Sistema Universitario de Servicio Social UABC" Language="C#" MasterPageFile="~/Generic.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="WEBGUI.index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style2 {
-            height: 23px;
-        }
-    </style>
+    .auto-style2 {
+        height: 23px;
+    }
+</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="auto-style1">
@@ -46,7 +46,7 @@
                         <tr>
                             <td style="text-align: center; vertical-align: middle">
                                 <asp:Label ID="Label2" runat="server" Text="Contraseña: "></asp:Label>
-                                <input id="tbAlPass" type="password" />
+                                &nbsp;<asp:TextBox ID="tbAlPass" runat="server" TextMode="Password"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>

@@ -43,17 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alumno.cs" />
+    <Compile Include="Modelos\Alumno.cs" />
     <Compile Include="DataAccess.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="ProgramasAsignados.cs" />
-    <Compile Include="ProgramaSS.cs" />
+    <Compile Include="Modelos\Program.cs" />
+    <Compile Include="Modelos\ProgramasAsignados.cs" />
+    <Compile Include="Modelos\ProgramaSS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Receptor.cs" />
-    <Compile Include="Usuario.cs" />
+    <Compile Include="Modelos\Receptor.cs" />
+    <Compile Include="Modelos\Usuario.cs" />
+    <Compile Include="Usuarios.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ISW.SUSS.DAL\DataAccess.csproj">
+      <Project>{1fc4a92a-03de-474f-953e-af431bba0cb9}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

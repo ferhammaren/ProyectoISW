@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Clases;
 
 namespace WEBGUI
 {
@@ -41,7 +42,10 @@ namespace WEBGUI
 
         protected void tbAlLogin_Click(object sender, EventArgs e)
         {
-            
+          if(!Usuarios.autenticarUsuario(tbAlCorreo.Text, tbAlPass.Text, 1))
+          //send not logged in message
+          else
+                //send 
         }
     }
 }
