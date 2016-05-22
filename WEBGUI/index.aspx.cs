@@ -13,5 +13,35 @@ namespace WEBGUI
         {
 
         }
+
+
+        protected void Tab1_Click(object sender, EventArgs e)
+        {
+            tabAlumnos.CssClass = "Clicked";
+            tabUA.CssClass = "Initial";
+            tabUR.CssClass = "Initial";
+            MainView.ActiveViewIndex = 0;
+        }
+
+        protected void Tab2_Click(object sender, EventArgs e)
+        {
+            tabAlumnos.CssClass = "Initial";
+            tabUA.CssClass = "Clicked";
+            tabUR.CssClass = "Initial";
+            MainView.ActiveViewIndex = 1;
+        }
+
+        protected void Tab3_Click(object sender, EventArgs e)
+        {
+            tabAlumnos.CssClass = "Initial";
+            tabUA.CssClass = "Initial";
+            tabUR.CssClass = "Clicked";
+            MainView.ActiveViewIndex = 2;
+        }
+
+        protected void tbAlLogin_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
