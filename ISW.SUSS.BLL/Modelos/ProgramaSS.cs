@@ -18,5 +18,13 @@ namespace Proyecto_ISW.Clases
         private int sector { get; set; }
         private int localidad { get; set; }
 
+        public ProgramaSS(int idProg, int idCarr, string nombre, int etapa, int uniRec, int cupo, int asig, int sector, int loc)
+        {
+            this.idPrograma = idProg;
+            this.idCarrera = idCarr;
+            this.nombrePrograma = nombre;
+            this.etapa = etapa;
+            this.
+        } 
     }
 }
