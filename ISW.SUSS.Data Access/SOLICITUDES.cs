@@ -3,7 +3,7 @@ using System.Data;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using MySql.Data.MySqlClient;
 
-namespace DataAccess
+namespace ISW.SUSS.DataAccess
 {
 	/// -----------------------------------------------------------------------------
 	/// Project	 : datas
@@ -44,20 +44,19 @@ namespace DataAccess
 		/// 	[Fer]	5/22/2016 3:40:25 AM	Created
 		/// </history>
 		/// -----------------------------------------------------------------------------
-		public static void Insert(int idSolicitud, int matricula, int idPrograma, string horarioAlumno, string horarioPrestacion, int horasPorHacer, DateTime fechaAsignacion, int fechaConclusion, int estadoSolicitud)
+		public static void Insert(int matricula, int idPrograma, string horarioAlumno, string horarioPrestacion, int horasPorHacer, DateTime fechaAsignacion, int fechaConclusion, int estadoSolicitud)
 		{
             Database myDatabase = factory.Create("constr");
-            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.Insertsolicitudes");
-
-			myCommand.Parameters.Add(CreateInParameter("P_idSolicitud", MySqlDbType.Int32, idSolicitud));
-			myCommand.Parameters.Add(CreateInParameter("P_matricula", MySqlDbType.Int32, matricula));
-			myCommand.Parameters.Add(CreateInParameter("P_idPrograma", MySqlDbType.Int32, idPrograma));
-			myCommand.Parameters.Add(CreateInParameter("P_horarioAlumno", MySqlDbType.VarChar, horarioAlumno));
-			myCommand.Parameters.Add(CreateInParameter("P_horarioPrestacion", MySqlDbType.VarChar, horarioPrestacion));
-			myCommand.Parameters.Add(CreateInParameter("P_horasPorHacer", MySqlDbType.Int32, horasPorHacer));
-			myCommand.Parameters.Add(CreateInParameter("P_fechaAsignacion", MySqlDbType.DateTime, fechaAsignacion));
-			myCommand.Parameters.Add(CreateInParameter("P_fechaConclusion", MySqlDbType.Int32, fechaConclusion));
-			myCommand.Parameters.Add(CreateInParameter("P_estadoSolicitud", MySqlDbType.Int32, estadoSolicitud));
+            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("Insertsolicitudes");
+            
+			myCommand.Parameters.Add(CreateInParameter("matricula", MySqlDbType.Int32, matricula));
+			myCommand.Parameters.Add(CreateInParameter("idPrograma", MySqlDbType.Int32, idPrograma));
+			myCommand.Parameters.Add(CreateInParameter("horarioAlumno", MySqlDbType.VarChar, horarioAlumno));
+			myCommand.Parameters.Add(CreateInParameter("horarioPrestacion", MySqlDbType.VarChar, horarioPrestacion));
+			myCommand.Parameters.Add(CreateInParameter("horasPorHacer", MySqlDbType.Int32, horasPorHacer));
+			myCommand.Parameters.Add(CreateInParameter("fechaAsignacion", MySqlDbType.DateTime, fechaAsignacion));
+			myCommand.Parameters.Add(CreateInParameter("fechaConclusion", MySqlDbType.Int32, fechaConclusion));
+			myCommand.Parameters.Add(CreateInParameter("estadoSolicitud", MySqlDbType.Int32, estadoSolicitud));
 
 			myDatabase.ExecuteNonQuery(myCommand);
 		}

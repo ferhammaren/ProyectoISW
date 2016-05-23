@@ -3,7 +3,7 @@ using System.Data;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using MySql.Data.MySqlClient;
 
-namespace DataAccess
+namespace ISW.SUSS.DataAccess
 {
 	/// -----------------------------------------------------------------------------
 	/// Project	 : datas
@@ -152,7 +152,7 @@ namespace DataAccess
 		public static DataSet  SelectSingle(int numUsuario) 
 		{
             Database myDatabase = factory.Create("constr");
-            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.SelectAlumnoByUserId");
+            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("SelectAlumnoByUserId");
 
 			myCommand.Parameters.Add(CreateInParameter("P_matricula", MySqlDbType.Int32, numUsuario));
 

@@ -3,7 +3,7 @@ using System.Data;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using MySql.Data.MySqlClient;
 
-namespace DataAccess
+namespace ISW.SUSS.DataAccess
 {
 	/// -----------------------------------------------------------------------------
 	/// Project	 : datas

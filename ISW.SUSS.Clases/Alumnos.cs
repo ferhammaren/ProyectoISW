@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using Proyecto_ISW.Clases;
 using Clases.Modelos;
-using DataAccess;
+using ISW.SUSS.DataAccess;
 
 namespace ISW.SUSS.Clases
 {
