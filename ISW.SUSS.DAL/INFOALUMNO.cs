@@ -149,12 +149,12 @@ namespace DataAccess
 		/// 	[Fer]	5/22/2016 3:40:25 AM	Created
 		/// </history>
 		/// -----------------------------------------------------------------------------
-		public static DataSet  SelectSingle(int matricula) 
+		public static DataSet  SelectSingle(int numUsuario) 
 		{
             Database myDatabase = factory.Create("constr");
-            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.SelectSingleinfoalumno");
+            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.SelectAlumnoByUserId");
 
-			myCommand.Parameters.Add(CreateInParameter("P_matricula", MySqlDbType.Int32, matricula));
+			myCommand.Parameters.Add(CreateInParameter("P_matricula", MySqlDbType.Int32, numUsuario));
 
 			return myDatabase.ExecuteDataSet(myCommand);
 		}

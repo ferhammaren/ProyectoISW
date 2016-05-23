@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using ISW.SUSS.Clases;
 
 namespace WEBGUI
 {
@@ -12,9 +13,10 @@ namespace WEBGUI
         protected void Page_Load(object sender, EventArgs e)
         {
             Label nameLabel = (Label)Master.FindControl("lbNombre");
-            if (!Session["numUsuario"].Equals(null))
+            if (!Session["UsuarioId"].Equals(null))
             {
-                
+                Alumnos.getInfoAlumno(Convert.ToInt32(Session["UsuarioId"].ToString()));
+                nameLabel=
             }
             else
             {
