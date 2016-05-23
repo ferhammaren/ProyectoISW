@@ -87,7 +87,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.aspx" />
-    <Content Include="urMain.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -175,13 +174,6 @@
     </Compile>
     <Compile Include="UnidadReceptora.Master.designer.cs">
       <DependentUpon>UnidadReceptora.Master</DependentUpon>
-    </Compile>
-    <Compile Include="urMain.aspx.cs">
-      <DependentUpon>urMain.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="urMain.aspx.designer.cs">
-      <DependentUpon>urMain.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

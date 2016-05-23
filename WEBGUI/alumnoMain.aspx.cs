@@ -11,15 +11,7 @@ namespace WEBGUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label nameLabel = (Label)Master.FindControl("lbNombre");
-            if (!Session["numUsuario"].Equals(null))
-            {
-                
-            }
-            else
-            {
 
-            }
         }
     }
 }

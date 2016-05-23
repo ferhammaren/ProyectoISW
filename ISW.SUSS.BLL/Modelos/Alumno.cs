@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Clases.Modelos
+namespace Proyecto_ISW
 {
-    public class Alumno 
+    class Alumno : Usuario
     {
         private string nombre { get; set; }
         private string ap_paterno { get; set; }

@@ -14,16 +14,6 @@
         .auto-style2 {
             width: 163px;
         }
-        .auto-style3 {
-            width: 512px;
-        }
-        .auto-style4 {
-            width: 512px;
-            height: 23px;
-        }
-        .auto-style5 {
-            height: 23px;
-        }
     </style>
 </head>
 <body>
@@ -33,6 +23,7 @@
             <td>
         <asp:Image ID="Image1" runat="server" Height="114px" ImageUrl="~\imagenes\logoUABC.jpg" Width="78px" />
             </td>
+            <td>&nbsp;</td>
             <td style="text-align: center; vertical-align: middle">Universidad Autónoma de Baja California
                 <br />
                 Coordinación de Formación Básica
@@ -42,15 +33,8 @@
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
-            </table>
-        <table class="auto-style1">
-            <tr><td class="auto-style4"></td><td class="auto-style5" style="text-align: right">Bienvenid@
-                <asp:Label ID="lbNombre" runat="server" Text="nombreCompleto"></asp:Label>
-                </td></tr>
-            <tr><td class="auto-style3">&nbsp;</td><td style="text-align: right">
-                <asp:HyperLink ID="HyperLink1" runat="server">Cerrar Sesión</asp:HyperLink>
-                </td></tr>
-            </table>
+        </table>
+        
         
     <div>
          <table class="auto-style1">
@@ -70,45 +54,6 @@
             </asp:Menu>
                  </td>
                  <td>    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-           
-                     <table class="auto-style1">
-                         <tr>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                         </tr>
-                         <tr>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                         </tr>
-                         <tr>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                         </tr>
-                         <tr>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                         </tr>
-                         <tr>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                             <td>&nbsp;</td>
-                         </tr>
-                     </table>
         
            
         </asp:ContentPlaceHolder></td>
