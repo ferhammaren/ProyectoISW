@@ -12,7 +12,7 @@ namespace ISW.SUSS.Clases
 {
    public class Alumnos
     {
-        private Alumno al=new Alumno();
+       private Alumno al=new Alumno();
        private static DataSet ds;
 
         public static void getInfoAlumno(int numero)

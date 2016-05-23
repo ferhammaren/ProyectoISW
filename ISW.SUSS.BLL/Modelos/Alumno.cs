@@ -10,8 +10,8 @@ namespace Clases.Modelos
     public class Alumno 
     {
         private string nombre /*{ get; set; }*/;
-        public string ap_paterno { get; set; }
-        public string ap_materno { get; set; }
+        private string ap_paterno /*{ get; set; }*/;
+        private string ap_materno /*{ get; set; }*/;
         private string idUsuario /*{ get; set; }*/;
         private int matricula /*{ get; set; }*/;
         private string unidadAcademica /*{ get; set; }*/;
@@ -24,13 +24,19 @@ namespace Clases.Modelos
         public DateTime fechaAcSegEtapa { get; set; }
         private ProgramaSS[] programas { get; set; }
 
-        public Alumno(string nombre, int matricula, string unidadAc, string idUsuario)
+        public Alumno(string nombre, string ap_pat, string ap_mat, int matricula, string unidadAc, string idUsuario)
         {
             this.nombre = nombre;
+            this.ap_paterno = ap_pat;
+            this.ap_materno = ap_mat;
             this.matricula = matricula;
             this.unidadAcademica = unidadAc;
             this.idUsuario = idUsuario;
         }
 
+        public Alumno()
+        {
+
+        }
     }
 }
