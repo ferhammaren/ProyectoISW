@@ -24,13 +24,7 @@ namespace Proyecto_ISW.Clases
             this.idCarrera = idCarr;
             this.nombrePrograma = nombre;
             this.etapa = etapa;
-            this.unidadReceptora = uniRec;
-            this.cupo = cupo;
-            this.asignados = asig;
-            this.sector = sector;
-            this.localidad = loc;
-        }
-
-
+            //this.
+        } 
     }
 }
