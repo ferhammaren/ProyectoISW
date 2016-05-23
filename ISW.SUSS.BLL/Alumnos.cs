@@ -12,7 +12,7 @@ namespace ISW.SUSS.Clases
 {
    public class Alumnos
     {
-       private Alumno al=new Alumno();
+        private Alumno al=new Alumno();
        private static DataSet ds;
 
         public static void getInfoAlumno(int numero)
@@ -22,7 +22,7 @@ namespace ISW.SUSS.Clases
 
         private void setAlumnoInfo()
         {
-            Alumno.ap_paterno=(ds.Tables[0].Rows[0]["ap_paterno"]);
+          //  Alumno.ap_paterno=(ds.Tables[0].Rows[0]["ap_paterno"]);
         }
 
     }

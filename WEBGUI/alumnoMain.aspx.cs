@@ -16,7 +16,7 @@ namespace WEBGUI
             if (!Session["UsuarioId"].Equals(null))
             {
                 Alumnos.getInfoAlumno(Convert.ToInt32(Session["UsuarioId"].ToString()));
-                nameLabel=
+                //nameLabel=
             }
             else
             {
