@@ -24,7 +24,7 @@ namespace Proyecto_ISW.Clases
             this.idCarrera = idCarr;
             this.nombrePrograma = nombre;
             this.etapa = etapa;
-            this.
+            //this.
         } 
     }
 }

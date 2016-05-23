@@ -21,7 +21,8 @@ namespace DataAccess
 	/// -----------------------------------------------------------------------------
 	public sealed class SOLICITUDES
 	{
-		private SOLICITUDES() {}
+        private static DatabaseProviderFactory factory = new DatabaseProviderFactory();
+        private SOLICITUDES() {}
 
 		/// -----------------------------------------------------------------------------
 		/// <summary>
@@ -45,8 +46,8 @@ namespace DataAccess
 		/// -----------------------------------------------------------------------------
 		public static void Insert(int idSolicitud, int matricula, int idPrograma, string horarioAlumno, string horarioPrestacion, int horasPorHacer, DateTime fechaAsignacion, int fechaConclusion, int estadoSolicitud)
 		{
-			Database myDatabase = DatabaseFactory.CreateDatabase();
-			MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.Insertsolicitudes");
+            Database myDatabase = factory.Create("constr");
+            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.Insertsolicitudes");
 
 			myCommand.Parameters.Add(CreateInParameter("P_idSolicitud", MySqlDbType.Int32, idSolicitud));
 			myCommand.Parameters.Add(CreateInParameter("P_matricula", MySqlDbType.Int32, matricula));
@@ -74,8 +75,8 @@ namespace DataAccess
 		/// -----------------------------------------------------------------------------
 		public static DataSet  SelectAll()
 		{
-			Database myDatabase = DatabaseFactory.CreateDatabase();
-			MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.SelectAllsolicitudes");
+            Database myDatabase = factory.Create("constr");
+            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.SelectAllsolicitudes");
 
 			return myDatabase.ExecuteDataSet(myCommand);
 		}

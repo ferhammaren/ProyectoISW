@@ -18,11 +18,11 @@ namespace Proyecto_ISW.Clases
             //return usuario;
         }
 
-        public ProgramaSS getProgramaAsignado(Alumno alumno)
-        {
-            data = new DataSet();
-            ProgramaSS programa = new ProgramaSS();
-            return programa;
-        }
+        //public ProgramaSS getProgramaAsignado(Alumno alumno)
+        //{
+        //    data = new DataSet();
+        //    ProgramaSS programa = new ProgramaSS();
+        //    return programa;
+        //}
     }
 }

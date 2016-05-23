@@ -8,19 +8,25 @@ using System.Threading.Tasks;
 
 namespace Clases
 {
-    class Usuarios
+    public class Usuarios
     {
         Usuarios user;
+        static int numUsuario;
 
-
-        public Boolean autenticarUsuario(String correo, String pass,int rol)
+        public static Boolean autenticarUsuario(String correo, String pass,int rol)
         {
             DataSet resultado;
           resultado= USUARIOS.SelectSingle(correo, pass, rol);
-            if (resultado.Tables.Count > 0)
+            if (resultado.Tables[0].Rows.Count > 0){
+                numUsuario = Convert.ToInt32(resultado.Tables[0].Rows[0]["numeroUsuario"].ToString());
                 return true;
+            }
             else
                 return false;
+        }
+        public static int getUserNumber()
+        {
+            return numUsuario;
         }
     }
 }
