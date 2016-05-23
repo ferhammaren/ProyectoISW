@@ -22,8 +22,7 @@ namespace DataAccess
 	/// -----------------------------------------------------------------------------
 	public sealed class USUARIOS
 	{
-       private static DatabaseProviderFactory factory = new DatabaseProviderFactory();
-        private USUARIOS() {}
+		private USUARIOS() {}
 
 		/// -----------------------------------------------------------------------------
 		/// <summary>
@@ -42,8 +41,8 @@ namespace DataAccess
 		public static Int32 Insert(string nom_Usuario, string pass_Usuario, DateTime ultimo_Acceso)
 		{
 			try{
-                Database myDatabase = factory.Create("constr");
-                MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("practica1.Insertusuarios");
+				Database myDatabase = DatabaseFactory.CreateDatabase();
+				MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("practica1.Insertusuarios");
 
 				myCommand.Parameters.Add(CreateInParameter("P_nom_Usuario", MySqlDbType.VarChar, nom_Usuario));
 				myCommand.Parameters.Add(CreateInParameter("P_pass_Usuario", MySqlDbType.VarChar, pass_Usuario));
@@ -75,8 +74,8 @@ namespace DataAccess
 		public static void Delete(int num_Usuario)
 		{
 			try{
-                Database myDatabase = factory.Create("constr");
-                MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("practica1.Deleteusuarios");
+				Database myDatabase = DatabaseFactory.CreateDatabase();
+				MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("practica1.Deleteusuarios");
 
 				myCommand.Parameters.Add(CreateInParameter("P_num_Usuario", MySqlDbType.Int32, num_Usuario));
 
@@ -101,13 +100,12 @@ namespace DataAccess
 		/// -----------------------------------------------------------------------------
 		public static DataSet  SelectSingle(string correo,string pass,int rol) 
 		{
-
 			try{
-                Database myDatabase = factory.Create("constr");
-                MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.autenticarUsuario");
+				Database myDatabase = DatabaseFactory.CreateDatabase();
+				MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("practica1.SelectSingleusuarios");
 
 				myCommand.Parameters.Add(CreateInParameter("correo", MySqlDbType.VarChar, correo));
-                myCommand.Parameters.Add(CreateInParameter("usPass", MySqlDbType.VarChar, pass));
+                myCommand.Parameters.Add(CreateInParameter("pass", MySqlDbType.VarChar, pass));
                 myCommand.Parameters.Add(CreateInParameter("rol", MySqlDbType.Int32, rol));
 
 
@@ -135,8 +133,8 @@ namespace DataAccess
 		public static DataSet  SelectAll()
 		{
 			try{
-                Database myDatabase = factory.Create("constr");
-                MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("practica1.SelectAllusuarios");
+				Database myDatabase = DatabaseFactory.CreateDatabase();
+				MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("practica1.SelectAllusuarios");
 
 				return myDatabase.ExecuteDataSet(myCommand);
 			}catch(Exception ex){

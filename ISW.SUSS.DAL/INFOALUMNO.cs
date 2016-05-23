@@ -21,8 +21,7 @@ namespace DataAccess
 	/// -----------------------------------------------------------------------------
 	public sealed class INFOALUMNO
 	{
-        private static DatabaseProviderFactory factory = new DatabaseProviderFactory();
-        private INFOALUMNO() {}
+		private INFOALUMNO() {}
 
 		/// -----------------------------------------------------------------------------
 		/// <summary>
@@ -52,8 +51,8 @@ namespace DataAccess
 		/// -----------------------------------------------------------------------------
 		public static void Insert(int matricula, int numUsuario, string ap_paterno, string ap_materno, string nombre, string correoAlt, int unidadAcademica, int carrera, int creditosCumplidos, DateTime fechaTallerPrimeraEtapa, DateTime fechaTallerSegundaEtapa, int horasPrimeraEtapa, int horasSegundaEtapa, DateTime fechaAcPrimeraEtapa, int fechaAcSegundaEtapa)
 		{
-            Database myDatabase = factory.Create("constr");
-            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.Insertinfoalumno");
+			Database myDatabase = DatabaseFactory.CreateDatabase();
+			MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.Insertinfoalumno");
 
 			myCommand.Parameters.Add(CreateInParameter("P_matricula", MySqlDbType.Int32, matricula));
 			myCommand.Parameters.Add(CreateInParameter("P_numUsuario", MySqlDbType.Int32, numUsuario));
@@ -99,14 +98,19 @@ namespace DataAccess
 		/// 	[Fer]	5/22/2016 3:40:25 AM	Created
 		/// </history>
 		/// -----------------------------------------------------------------------------
-		public static void Update(int matricula, int numUsuario, string correoAlt, int creditosCumplidos, DateTime fechaTallerPrimeraEtapa, DateTime fechaTallerSegundaEtapa, int horasPrimeraEtapa, int horasSegundaEtapa, DateTime fechaAcPrimeraEtapa, int fechaAcSegundaEtapa)
+		public static void Update(int matricula, int numUsuario, string ap_paterno, string ap_materno, string nombre, string correoAlt, int unidadAcademica, int carrera, int creditosCumplidos, DateTime fechaTallerPrimeraEtapa, DateTime fechaTallerSegundaEtapa, int horasPrimeraEtapa, int horasSegundaEtapa, DateTime fechaAcPrimeraEtapa, int fechaAcSegundaEtapa)
 		{
-            Database myDatabase = factory.Create("constr");
-            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.Updateinfoalumno");
+			Database myDatabase = DatabaseFactory.CreateDatabase();
+			MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.Updateinfoalumno");
 
 			myCommand.Parameters.Add(CreateInParameter("P_matricula", MySqlDbType.Int32, matricula));
 			myCommand.Parameters.Add(CreateInParameter("P_numUsuario", MySqlDbType.Int32, numUsuario));
+			myCommand.Parameters.Add(CreateInParameter("P_ap_paterno", MySqlDbType.VarChar, ap_paterno));
+			myCommand.Parameters.Add(CreateInParameter("P_ap_materno", MySqlDbType.VarChar, ap_materno));
+			myCommand.Parameters.Add(CreateInParameter("P_nombre", MySqlDbType.VarChar, nombre));
 			myCommand.Parameters.Add(CreateInParameter("P_correoAlt", MySqlDbType.VarChar, correoAlt));
+			myCommand.Parameters.Add(CreateInParameter("P_unidadAcademica", MySqlDbType.Int32, unidadAcademica));
+			myCommand.Parameters.Add(CreateInParameter("P_carrera", MySqlDbType.Int32, carrera));
 			myCommand.Parameters.Add(CreateInParameter("P_creditosCumplidos", MySqlDbType.Int32, creditosCumplidos));
 			myCommand.Parameters.Add(CreateInParameter("P_fechaTallerPrimeraEtapa", MySqlDbType.DateTime, fechaTallerPrimeraEtapa));
 			myCommand.Parameters.Add(CreateInParameter("P_fechaTallerSegundaEtapa", MySqlDbType.DateTime, fechaTallerSegundaEtapa));
@@ -130,8 +134,8 @@ namespace DataAccess
 		/// -----------------------------------------------------------------------------
 		public static void Delete(int matricula)
 		{
-            Database myDatabase = factory.Create("constr");
-            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.Deleteinfoalumno");
+			Database myDatabase = DatabaseFactory.CreateDatabase();
+			MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.Deleteinfoalumno");
 
 			myCommand.Parameters.Add(CreateInParameter("P_matricula", MySqlDbType.Int32, matricula));
 
@@ -151,8 +155,8 @@ namespace DataAccess
 		/// -----------------------------------------------------------------------------
 		public static DataSet  SelectSingle(int matricula) 
 		{
-            Database myDatabase = factory.Create("constr");
-            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.SelectSingleinfoalumno");
+			Database myDatabase = DatabaseFactory.CreateDatabase();
+			MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.SelectSingleinfoalumno");
 
 			myCommand.Parameters.Add(CreateInParameter("P_matricula", MySqlDbType.Int32, matricula));
 
@@ -172,8 +176,8 @@ namespace DataAccess
 		/// -----------------------------------------------------------------------------
 		public static DataSet  SelectAll()
 		{
-            Database myDatabase = factory.Create("constr");
-            MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.SelectAllinfoalumno");
+			Database myDatabase = DatabaseFactory.CreateDatabase();
+			MySqlCommand myCommand = (MySqlCommand) myDatabase.GetStoredProcCommand("suss.SelectAllinfoalumno");
 
 			return myDatabase.ExecuteDataSet(myCommand);
 		}
