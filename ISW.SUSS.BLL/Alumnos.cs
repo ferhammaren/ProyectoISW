@@ -22,7 +22,7 @@ namespace ISW.SUSS.Clases
 
         private void setAlumnoInfo()
         {
-            Alumno.setName(ds.Tables[0].Rows[0]["ap_paterno"]);
+            Alumno.ap_paterno=(ds.Tables[0].Rows[0]["ap_paterno"]);
         }
 
     }
