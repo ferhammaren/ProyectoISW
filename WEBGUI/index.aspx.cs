@@ -43,8 +43,15 @@ namespace WEBGUI
         protected void tbAlLogin_Click(object sender, EventArgs e)
         {
           if(!Usuarios.autenticarUsuario(tbAlCorreo.Text, tbAlPass.Text, 1))
-          //send not logged in message
-          else
+            {
+                Literal ltr = new Literal();
+                ltr.Text = @"<script type='text/javascript'> alert('Usuario o contraseña incorrectos') </script>";
+                this.Controls.Add(ltr);
+            }
+            else
+            {
+                Response.Redirect("~/uaMain.aspx?UsuarioId=" + Usuarios.getUserNumber());
+            }
                 //send 
         }
 
