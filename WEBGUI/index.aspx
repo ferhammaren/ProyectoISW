@@ -81,7 +81,7 @@
                     <tr>
 <td style="text-align: center; vertical-align: middle">
 
-    <asp:Button ID="btnUALogin" runat="server" Text="Iniciar Sesión" />
+    <asp:Button ID="btnUALogin" runat="server" Text="Iniciar Sesión" OnClick="btnUALogin_Click" />
 
 </td>
                   </td>
@@ -111,7 +111,7 @@
                     <tr>
 <td style="text-align: center; vertical-align: middle">
 
-    <asp:Button ID="tbURLogin" runat="server" Text="Iniciar Sesión" />
+    <asp:Button ID="tbURLogin" runat="server" Text="Iniciar Sesión" OnClick="tbURLogin_Click" />
 
 </td>
                   </td>

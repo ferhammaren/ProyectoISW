@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Modelos\Alumno.cs" />
     <Compile Include="DataAccess.cs" />
+    <Compile Include="Alumnos.cs" />
     <Compile Include="Modelos\Program.cs" />
     <Compile Include="Modelos\ProgramasAsignados.cs" />
     <Compile Include="Modelos\ProgramaSS.cs" />
