@@ -43,9 +43,45 @@ namespace WEBGUI
         protected void tbAlLogin_Click(object sender, EventArgs e)
         {
           if(!Usuarios.autenticarUsuario(tbAlCorreo.Text, tbAlPass.Text, 1))
-          //send not logged in message
-          else
-                //send 
+                //send not logged in message
+            else
+            {
+
+                Response.Redirect("~/alumnoMain.aspx?UsuarioId=" + Usuarios.getUserNumber());
+            }
+                
+        }
+
+        protected void btnUALogin_Click(object sender, EventArgs e)
+        {
+            Literal ltr = new Literal();
+            if (!Usuarios.autenticarUsuario(tbAlCorreo.Text, tbAlPass.Text, 1))
+            {
+                //send not logged in message
+                ltr.Text = @"<script type='text/javascript'> alert('Usuario o contraseña incorrectos') </script>";
+                this.Controls.Add(ltr);
+            }
+            else
+            {
+
+                Response.Redirect("~/uaMain.aspx?UsuarioId=" + Usuarios.getUserNumber());
+            }
+        }
+
+        protected void tbURLogin_Click(object sender, EventArgs e)
+        {
+            Literal ltr = new Literal();
+            if (!Usuarios.autenticarUsuario(tbAlCorreo.Text, tbAlPass.Text, 2))
+            {
+                //send not logged in message
+                ltr.Text = @"<script type='text/javascript'> alert('Usuario o contraseña incorrectos') </script>";
+                this.Controls.Add(ltr);
+            }
+            else
+            {
+
+                Response.Redirect("~/urMain.aspx?UsuarioId=" + Usuarios.getUserNumber());
+            }
         }
     }
 }
